@@ -27,368 +27,112 @@
             background-color: var(--bg);
             color: var(--text-main);
             line-height: 1.6;
+            padding: 20px;
         }
 
-        /* Навигация */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
         }
 
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-main);
-        }
-
-        /* Главный баннер */
-        .hero {
-            min-height: 100vh;
-            padding: 140px 10% 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            background: radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15), transparent 40%),
-                        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15), transparent 40%);
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: rgba(236, 72, 153, 0.1);
-            color: var(--accent-primary);
-            border: 1px solid rgba(236, 72, 153, 0.2);
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-
-        .hero-text h1 span {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        .avatar-box {
-            position: relative;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 50px rgba(236, 72, 153, 0.3);
-            flex-shrink: 0;
-        }
-
-        .avatar-box img {
-            width: 270px;
-            height: 270px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: var(--bg);
-        }
-
-        /* Кнопки */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            color: white;
-        }
-
-        .btn-primary:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        /* Общие стили секций */
-        section {
-            padding: 80px 10%;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 50%;
-            height: 3px;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            border-radius: 2px;
-        }
-
-        /* Карточки и сетки */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
+        header {
+            text-align: center;
+            padding: 40px 20px;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 25px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s, border-color 0.3s;
+            margin-bottom: 24px;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(236, 72, 153, 0.4);
+        h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
 
-        /* Секция Навыков */
-        .skills-list {
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: var(--text-main);
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 15px;
         }
 
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.05);
+        ul li {
+            background: rgba(236, 72, 153, 0.1);
+            color: var(--accent-primary);
+            border: 1px solid rgba(236, 72, 153, 0.2);
             padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid var(--border);
-        }
-
-        /* Контакты */
-        .contact-info p {
-            margin-bottom: 15px;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Футер */
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
-        /* Адаптивность */
-        @media (max-width: 900px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 100px;
-            }
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
 
-            .badge {
-                margin: 0 auto 20px;
-            }
-
-            .btn-group {
-                justify-content: center;
-            }
-
-            .section-title::after {
-                left: 25%;
-            }
-
-            .nav-links {
-                display: none; /* Для упрощения в одном файле */
-            }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Дария.Портфолио</div>
-        <ul class="nav-links">
-            <li><a href="#about">О себе</a></li>
-            <li><a href="#education">Учеба</a></li>
-            <li><a href="#projects">Проекты</a></li>
-            <li><a href="#skills">Навыки</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>Куандык Дария</h1>
+            <p class="subtitle">Студентка | Начинающий IT-специалист</p>
+        </header>
 
-    <section class="hero" id="about">
-        <div class="hero-text">
-            <span class="badge">Студентка ЮКУ им. М. Ауэзова</span>
-            <h1>Привет, я <br><span>Куандык Дария</span></h1>
-            <p>Учусь в Южно-Казахстанском университете имени М. Ауэзова. Стремлюсь к профессиональному развитию, участию в интересных проектах и получению практического опыта в своей специальности.</p>
-            <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">Связаться</a>
-                <a href="#projects" class="btn btn-outline">Мои работы</a>
-            </div>
-        </div>
-        <div class="avatar-box">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="Куандык Дария">
-        </div>
-    </section>
+        <section>
+            <h2>О себе</h2>
+            <p>Привет! Я учусь в сфере информационных технологий, увлечена веб-разработкой и созданием современных интерфейсов. Ищу возможности для стажировки и участия в реальных проектах.</p>
+        </section>
 
-    <section id="education">
-        <h2 class="section-title">Образование</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Университет имени М. Ауэзова</h3>
-                <p style="color: var(--accent-primary); margin: 5px 0 15px;">ЮКУ (Auezov University)</p>
-                <p><strong>Специальность:</strong> [Укажите вашу специальность/факультет]</p>
-                <p><strong>Курс:</strong> [Укажите ваш курс]</p>
-                <p style="margin-top: 10px; color: var(--text-muted);">Активно участвую в академической и общественной жизни университета.</p>
-            </div>
-            <div class="card">
-                <h3>Достижения и курсы</h3>
-                <p>• Сертификаты о прохождении онлайн-курсов</p>
-                <p>• Участие в студенческих конференциях</p>
-                <p>• Академические проекты и исследования</p>
-            </div>
-        </div>
-    </section>
+        <section>
+            <h2>Навыки</h2>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript</li>
+                <li>Git / GitHub</li>
+                <li>VS Code</li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2 class="section-title">Проекты и работы</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Учебный проект №1</h3>
-                <p style="color: var(--text-muted); margin: 10px 0;">Краткое описание курсовой работы, исследования или учебного проекта, выполненного в процессе учебы.</p>
-                <a href="#" style="color: var(--accent-primary); text-decoration: none; font-size: 0.9rem;">Подробнее →</a>
-            </div>
-            <div class="card">
-                <h3>Учебный проект №2</h3>
-                <p style="color: var(--text-muted); margin: 10px 0;">Описание второго важного проекта, задачи, которую удалось решить, или участия в мероприятии.</p>
-                <a href="#" style="color: var(--accent-primary); text-decoration: none; font-size: 0.9rem;">Подробнее →</a>
-            </div>
-            <div class="card">
-                <h3>Исследования / Статьи</h3>
-                <p style="color: var(--text-muted); margin: 10px 0;">Информация о научных статьях, докладах или выступлениях в рамках ЮКУ им. М. Ауэзова.</p>
-                <a href="#" style="color: var(--accent-primary); text-decoration: none; font-size: 0.9rem;">Подробнее →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Навыки</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Профессиональные</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Анализ данных</span>
-                    <span class="skill-tag">Исследования</span>
-                    <span class="skill-tag">MS Office / Excel</span>
-                    <span class="skill-tag">Презентации</span>
-                    <span class="skill-tag">[Ваш навык]</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Личные (Soft Skills)</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Командная работа</span>
-                    <span class="skill-tag">Ответственность</span>
-                    <span class="skill-tag">Тайм-менеджмент</span>
-                    <span class="skill-tag">Быстрая обучаемость</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Языки</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Казахский (родной)</span>
-                    <span class="skill-tag">Русский (свободно)</span>
-                    <span class="skill-tag">Английский (B1/B2)</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Контакты</h2>
-        <div class="card contact-info" style="max-width: 600px;">
-            <p>📧 Email: <a href="mailto:dariya@example.com" style="color: var(--accent-primary);">dariya.kuandyk@example.com</a></p>
-            <p>📱 Telegram / WhatsApp: <a href="#" style="color: var(--accent-primary);">+7 (XXX) XXX-XX-XX</a></p>
-            <p>📍 Локация: г. Шымкент, Казахстан</p>
-            <p>🎓 ВУЗ: Южно-Казахстанский университет имени М. Ауэзова</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Куандык Дария. Все права защищены.</p>
-    </footer>
+        <section>
+            <h2>Контакты</h2>
+            <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/Kairbekov017" target="_blank">Kairbekov017</a></p>
+        </section>
+    </div>
 
 </body>
 </html>
